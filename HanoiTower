@@ -1,0 +1,25 @@
+package 汉诺塔HanoiTower;
+
+public class HanoiTower {
+	public static int Count = 0;
+	public static void moveDish(int n,char origin,char assistant,char destination) {
+		if(n == 1) {
+			moveAction(origin,destination);
+		}
+		else {
+			moveDish(n-1,origin,destination,assistant);
+			moveAction(origin,destination);
+			moveDish(n-1,assistant,origin,destination);
+		}
+	}
+	
+	public static void moveAction(char origin,char destination) {
+		Count++;
+		System.out.println(Count+"."+origin+"--->"+destination);
+	}
+	
+	public static void main(String[] args) {
+		int n = 3;
+		moveDish(n,'A','B','C');
+	}
+}
