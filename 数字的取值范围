@@ -1,0 +1,10 @@
+//范例
+JRadioButton FLOAT = new JRadioButton("float\u7C7B\u578B");
+		FLOAT.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MAXLabel.setText("float类型的最大值：");
+				MINLabel.setText("float类型的最小值：");
+				MAXResult.setText(Float.MAX_VALUE+"");				
+				MINResult.setText(Float.MIN_VALUE+"");
+			}
+		});
